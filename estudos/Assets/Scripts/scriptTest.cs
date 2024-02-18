@@ -11,13 +11,19 @@ public class scriptTest : MonoBehaviour
     protected bool acelerate = false;
     public GameObject myGameObject;
     private Transform myTransform;
-    protected Color color = Color.red;
+    public Color color = Color.red;
     #endregion
     
     #region METODOS
+    private void ChangeColor()
+    {
+        color = Color.blue;
+        life -= damege;
+    }
+
     void Start()
     {
-        
+        ChangeColor();
     }
 
     void Update()
