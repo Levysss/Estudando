@@ -8,6 +8,6 @@ public class scriptTest : MonoBehaviour
 
     void Start()
     {
-        car.ChangeColor();
+        
     }
 }

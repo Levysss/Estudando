@@ -16,47 +16,38 @@ public class Car : MonoBehaviour
     #endregion
     
     #region METODOS
-    public void ChangeColor()
+    public void ChangeColor(Color newColor)
     {
-        color = Color.blue;
+        color = newColor;
         life -= damege;
     }
     //---------------------------
+    
     void Awake()
     {
-        Debug.Log("Aweke foi chamado");
     
     }
     void Start()
     {
-        Debug.Log("Start foi chamado!");
-        ChangeColor();
+       
     }
 
     void Update()
     {
-        Debug.Log("update");
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            ChangeColor(Color.yellow);
+        }
+        if(Input.GetKeyUp(KeyCode.Space))
+        {
+            ChangeColor(Color.red);
+        }
+        if(Input.GetKey(KeyCode.W))
+        {
+            ChangeColor(Color.black);
+        }
     }
-    private void LateUpdate()
-    {
-        Debug.Log("Late Update ativo");
-    }
-    private void FixedUpdate()
-    {
-        Debug.Log("FixedUpdate ativo");
-    }
-    private void OnEnable()
-    {
-        Debug.Log("OnEnable");
-    }
-    private void OnDisable()
-    {
-        Debug.Log("OnDisable");
-    }
-    private void OnDestroy()
-    {
-        Debug.Log("OnDestroy");
-    }
+    
     #endregion
 
 }
