@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,15 +21,41 @@ public class Car : MonoBehaviour
         color = Color.blue;
         life -= damege;
     }
-
+    //---------------------------
+    void Awake()
+    {
+        Debug.Log("Aweke foi chamado");
+    
+    }
     void Start()
     {
+        Debug.Log("Start foi chamado!");
         ChangeColor();
     }
 
     void Update()
     {
-        
+        Debug.Log("update");
+    }
+    private void LateUpdate()
+    {
+        Debug.Log("Late Update ativo");
+    }
+    private void FixedUpdate()
+    {
+        Debug.Log("FixedUpdate ativo");
+    }
+    private void OnEnable()
+    {
+        Debug.Log("OnEnable");
+    }
+    private void OnDisable()
+    {
+        Debug.Log("OnDisable");
+    }
+    private void OnDestroy()
+    {
+        Debug.Log("OnDestroy");
     }
     #endregion
 
