@@ -6,13 +6,21 @@ public class Car : MonoBehaviour
 {
     
     #region VARIAVEIS
-    private int doors = 4;
+
+    [Header("Variaves")]
+    public int doors = 4;
     public float life = 10;
     public float damege = 0.5f;
-    protected bool acelerate = false;
-    public GameObject myGameObject;
-    private Transform myTransform;
+    public bool canAcelerate = false;
+
+    [Header("Colors")]
     public Color color = Color.red;
+
+    [Header("Imputs")]
+    public KeyCode keyCode = KeyCode.Space;
+    //privadas dps das publicas
+    private GameObject myGameObject;
+    private Transform myTransform;
     #endregion
     
     #region METODOS
@@ -34,17 +42,27 @@ public class Car : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(keyCode))
         {
             ChangeColor(Color.yellow);
         }
-        if(Input.GetKeyUp(KeyCode.Space))
+        else if(Input.GetKeyUp(keyCode))
         {
             ChangeColor(Color.red);
         }
-        if(Input.GetKey(KeyCode.W))
+        else if(Input.GetKey(KeyCode.W))
         {
             ChangeColor(Color.black);
+        }
+
+        if(Input.GetMouseButtonDown(0))
+        {
+            Debug.Log("Mouse down");
+        }
+
+        if(Input.GetButtonDown("Fire1"))
+        {
+
         }
     }
     
