@@ -13,7 +13,12 @@ public class scriptTest : MonoBehaviour
 
     private void Update()
     {
-        if(value01<0)
+       CheckValue();
+       CheckSwitchCase();
+    }
+    private void CheckValue()
+    {
+         if(value01<0)
         {
             Debug.Log("Menor que 0");
         }
@@ -25,5 +30,9 @@ public class scriptTest : MonoBehaviour
         {
             Debug.Log("Igual a 0");
         }
+    }
+    private void CheckSwitchCase()
+    {
+
     }
 }
