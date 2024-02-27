@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using MeuJogo.Bus.Maneger;
 
+public enum Animals
+{
+    Dog,
+    Cat,
+    Fish
+}
 public class scriptTest : MonoBehaviour
 {
     public string minhaString;
@@ -10,6 +16,7 @@ public class scriptTest : MonoBehaviour
     [Range(-5,5)]
     public int value01;
     public int value02;
+    public Animals animal;
 
     private void Update()
     {
@@ -33,16 +40,16 @@ public class scriptTest : MonoBehaviour
     }
     private void CheckSwitchCase()
     {
-        switch(minhaString)
+        switch(animal)
         {
-            case "Levy":
-                Debug.Log("Humano");
+            case Animals.Fish:
+                Debug.Log("Pingo");
             break;
-            case "Batatinha":
-                Debug.Log("Gata");
+            case Animals.Cat:
+                Debug.Log("Batatinha");
             break;
-            case "Mel":
-                Debug.Log("Cadela");
+            case Animals.Dog:
+                Debug.Log("Mel");
             break;
             default:
                 Debug.Log("ESSE SER EU N CONHEÇO AINDA");
