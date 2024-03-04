@@ -363,9 +363,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d052ce5bba370d54e940b14c16946bd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eventCallback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8951915228973155243}
+        m_TargetAssemblyTypeName: Car, Assembly-CSharp
+        m_MethodName: Acelerate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  minhaString: 
   checkStatus: 0
   value01: 0
   value02: 0
+  animal: 0
 --- !u!1 &335650470
 GameObject:
   m_ObjectHideFlags: 0
@@ -1268,6 +1285,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54c4216ad7bb64443a412177d77f3168, type: 3}
+--- !u!114 &8951915228973155243 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2603049288884080792, guid: 54c4216ad7bb64443a412177d77f3168, type: 3}
+  m_PrefabInstance: {fileID: 8951915228973155242}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c8a3e74406f92346be2da1d33312a72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

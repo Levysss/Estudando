@@ -29,6 +29,10 @@ public class Car : MonoBehaviour
         color = newColor;
         life -= damege;
     }
+    public void Acelerate()
+    {
+        canAcelerate =true;
+    }
     //---------------------------
     
     void Awake()

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using MeuJogo.Bus.Maneger;
 
 public enum Animals
@@ -11,6 +12,7 @@ public enum Animals
 }
 public class scriptTest : MonoBehaviour
 {
+    public UnityEvent eventCallback;
     public string minhaString;
     public bool checkStatus= false;
     [Range(-5,5)]
